@@ -20,6 +20,10 @@ class LaravelSSLClientServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/config/ssl.php' => config_path('ssl.php'),
         ], "laravel-ssl-config");
+
+        $this->publishes([
+            __DIR__.'/migrations' => database_path('migrations'),
+        ], "laravel-ssl-migrations");
     }
 
     /**
