@@ -1,0 +1,32 @@
+{
+    "name": "hafael/laravel-sslgen",
+    "description": "ACME Client Implementation for Laravel",
+    "type": "library",
+    "require": {
+        "laravel/framework": ">=5.3.0",
+        "yourivw/leclient": "dev-master"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Rafael Villa-Verde",
+            "email": "villa655321verde@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Hafael\\LaravelSSLClient\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hafael\\LaravelSSLClient\\LaravelSSLClientServiceProvider"
+            ],
+            "aliases": {
+                "LetsEncrypt": "Hafael\\LaravelSSLClient\\LEClient\\Facades"
+            }
+        }
+    }
+}
